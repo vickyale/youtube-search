@@ -22,6 +22,7 @@ function hideVideoView() {
 }
 
 function showVideoView() {
+    ga('send','event','Video','Click','Mostrar Video');
     $(this).on('click', hideVideoView).addClass('active');
 }
 
@@ -77,7 +78,6 @@ function callback(res) {
 }
 
 function submit() {
-    
     ga('send', 'event', 'Busqueda', 'Submit', 'Caja de Busqueda de la parte superior');
     $query.val($query.val() || 'Go Pro Videos');
     textSearch = $query.val();
