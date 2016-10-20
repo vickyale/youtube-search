@@ -18,11 +18,13 @@ function sendSocialEvent (e) {
 $link.on('click', sendSocialEvent);
 
 function hideVideoView() {
+
   ga('send','event','Video','Click','Ocultar Video');
     $(this).on('click', showVideoView).removeClass('active');
 }
 
 function showVideoView() {
+    
     ga('send','event','Video','Click','Mostrar Video');
     $(this).on('click', hideVideoView).addClass('active');
 }
