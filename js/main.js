@@ -77,9 +77,10 @@ function callback(res) {
 }
 
 function submit() {
+    ga('send', 'event', 'Busqueda', 'Submit', 'Caja de Busqueda de la parte superior');
     $query.val($query.val() || 'Go Pro Videos');
     textSearch = $query.val();
-    // Envento de Segment
+    // Evento de Segment
     analytics.track('Search a video', {
       query: textSearch
     });
