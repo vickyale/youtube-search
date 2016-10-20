@@ -77,6 +77,7 @@ function callback(res) {
 }
 
 function submit() {
+    
     ga('send', 'event', 'Busqueda', 'Submit', 'Caja de Busqueda de la parte superior');
     $query.val($query.val() || 'Go Pro Videos');
     textSearch = $query.val();
